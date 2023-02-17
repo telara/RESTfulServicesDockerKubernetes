@@ -117,7 +117,7 @@ components:
           grade: 9
           summary: Example Grade Record
         student_id: 0
-        first_name: Tess
+        first_name: Tessa
         second_name: Robby
     GradeRecord:
       required:
