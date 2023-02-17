@@ -15,34 +15,34 @@ class Student(Model):
 
     Do not edit the class manually.
     """
-    def __init__(self, student_id: int=None, first_name: str=None, second_name: str=None, grade_record: List[GradeRecord]=None):  # noqa: E501
+    def __init__(self, student_id: int=None, first_name: str=None, last_name: str=None, grade_record: List[GradeRecord]=None):  # noqa: E501
         """Student - a model defined in Swagger
 
         :param student_id: The student_id of this Student.  # noqa: E501
         :type student_id: int
         :param first_name: The first_name of this Student.  # noqa: E501
         :type first_name: str
-        :param second_name: The second_name of this Student.  # noqa: E501
-        :type second_name: str
+        :param last_name: The last_name of this Student.  # noqa: E501
+        :type last_name: str
         :param grade_record: The grade_record of this Student.  # noqa: E501
         :type grade_record: List[GradeRecord]
         """
         self.swagger_types = {
             'student_id': int,
             'first_name': str,
-            'second_name': str,
+            'last_name': str,
             'grade_record': List[GradeRecord]
         }
 
         self.attribute_map = {
             'student_id': 'student_id',
             'first_name': 'first_name',
-            'second_name': 'second_name',
+            'last_name': 'last_name',
             'grade_record': 'gradeRecord'
         }
         self._student_id = student_id
         self._first_name = first_name
-        self._second_name = second_name
+        self._last_name = last_name
         self._grade_record = grade_record
 
     @classmethod
@@ -101,25 +101,27 @@ class Student(Model):
         self._first_name = first_name
 
     @property
-    def second_name(self) -> str:
-        """Gets the second_name of this Student.
+    def last_name(self) -> str:
+        """Gets the last_name of this Student.
 
 
-        :return: The second_name of this Student.
+        :return: The last_name of this Student.
         :rtype: str
         """
-        return self._second_name
+        return self._last_name
 
-    @second_name.setter
-    def second_name(self, second_name: str):
-        """Sets the second_name of this Student.
+    @last_name.setter
+    def last_name(self, last_name: str):
+        """Sets the last_name of this Student.
 
 
-        :param second_name: The second_name of this Student.
-        :type second_name: str
+        :param last_name: The last_name of this Student.
+        :type last_name: str
         """
+        if last_name is None:
+            raise ValueError("Invalid value for `last_name`, must not be `None`")  # noqa: E501
 
-        self._second_name = second_name
+        self._last_name = last_name
 
     @property
     def grade_record(self) -> List[GradeRecord]:

@@ -9,8 +9,6 @@ info:
     url: http://www.apache.org/licenses/LICENSE-2.0.html
   version: 1.0.0
 servers:
-#- url: https://virtserver.swaggerhub.com/telara/tutorial/1.0.0
-#  description: SwaggerHub API Auto Mocking
 - url: https://virtserver.SwaggerHub.com/tutorial/1.0.0
   description: SwaggerHub API Auto Mocking
 paths:
@@ -59,7 +57,7 @@ paths:
           format: integer
       responses:
         "200":
-          description: "OK, successful operation"
+          description: "OK, successful operaiton"
         "400":
           description: "Bad request, invalid ID"
         "404":
@@ -95,30 +93,22 @@ components:
     Student:
       required:
       - first_name
-      - second_name
+      - last_name
       type: object
       properties:
         student_id:
           type: integer
         first_name:
           type: string
-        second_name:
+        last_name:
           type: string
         gradeRecord:
           type: array
           items:
             $ref: '#/components/schemas/GradeRecord'
       example:
-        gradeRecord:
-        - subject_name: Maths
-          grade: 8.5
-          summary: Example Grade Record
-        - subject_name: English
-          grade: 9
-          summary: Example Grade Record
-        student_id: 0
-        first_name: Tessa
-        second_name: Robby
+        first_name: Django
+        last_name: Blue
     GradeRecord:
       required:
       - grade
@@ -133,6 +123,8 @@ components:
           type: number
           format: float
       example:
-        subject_name: Maths
-        grade: 8.5
-        summary: Example Grade Record
+        Maths:
+          subject_name: Maths
+          grade: 8.5
+          summary: Example Grade Record
+
